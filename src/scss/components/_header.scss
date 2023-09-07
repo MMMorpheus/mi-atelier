@@ -1,0 +1,18 @@
+.header {
+  padding-block: 30px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    position: relative;
+
+    a {
+      position: absolute;
+      inset: 0;
+    }
+  }
+}

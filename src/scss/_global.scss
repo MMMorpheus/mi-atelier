@@ -1,0 +1,107 @@
+// Body
+body {
+  background-color: $seconderyColor;
+  font-family: $fontPrimary, sans-serif;
+  font-weight: 500;
+}
+
+// Container
+[class*="__container"] {
+  width: 100%;
+  max-width: ($containerWidth + $containerSafePadding) + px;
+  padding: 0 $containerInlinePadding + px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint1450) {
+    max-width: 1320px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+
+// Wrapper & Main css's classes press the footer to the page bottom, main element grows the whole available space of page
+// Wrapper & Main css's прижимают футер к низу страницы, елемент main растягивается на все доступное пространство страницы
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.dis-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100vw;
+  overscroll-behavior: none;
+}
+
+h1 {
+  color: $primaryColor;
+  font-size: 160px;
+  letter-spacing: -6.2px;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sectionHeading {
+  width: 100%;
+  border-top: 1px solid $primaryColor;
+  border-bottom: 1px solid $primaryColor;
+  color: $primaryColor;
+  font-size: 125px;
+  letter-spacing: -7.5px;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.desc {
+  color: $primaryColor;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.75px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.btn {
+  @include resetBtn;
+
+  border: 1px solid white;
+  border-radius: 40px;
+  backdrop-filter: blur(15px);
+  background: rgb(227 227 227 / 20%);
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: scale .3s ease, box-shadow .3s ease;
+
+  &:hover {
+    box-shadow: 0 0 15px 2px rgb(255 255 255 / 75%);
+    scale: 1.03;
+  }
+}
+
+.btn-md {
+  padding: 27px 192px;
+}
+
+.btn-lg {
+  padding: 31px 260px;
+}

@@ -1,0 +1,65 @@
+$linkPadding: 10px;
+
+.nav {
+  position: static;
+
+  @media screen and (max-width: $burgerBreakPoint) {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  &__list {
+    display: flex;
+    gap: 0 80px;
+
+    @media screen and (max-width: $burgerBreakPoint) {
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: auto;
+    }
+  }
+
+  &__item:last-child {
+    @media screen and (min-width: $burgerBreakPoint) {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding: 0 $linkPadding;
+    color: $primaryColor;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+
+    &::after {
+      position: absolute;
+      bottom: -2px;
+      left: $linkPadding;
+      width: calc(100% - $linkPadding * 2);
+      height: 2px;
+      background-color: $primaryColor;
+      content: "";
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+      @media (hover: hover) {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+
+  &-active {
+    transform: translateX(100%);
+  }
+}

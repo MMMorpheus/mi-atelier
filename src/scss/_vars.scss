@@ -1,0 +1,24 @@
+@use 'sass:math';
+
+// Container & Breakpoints
+$containerWidth: 1280;
+$containerSafePadding: 40;
+$containerInlinePadding: math.div($containerSafePadding, 2);
+$breakpoint1450: 1449.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+
+// Colors
+$primaryColor: #F81808;
+$seconderyColor: #E0D9D3;
+
+// Burger
+$burgerBreakPoint: $breakpoint992;
+
+// Font families
+$fontPrimary: inter
+
+// Тут должны быть объявлены переменные для шрифтов и изменения их размера при медиа-запросах
+
+
