@@ -1,0 +1,45 @@
+.collections {
+  padding: 200px 0;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    width: calc(50% - 10px);
+    height: 560px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+
+    &:nth-child(1){
+      @include imageSet('../img/coll-1', 'png')
+    }
+
+    &:nth-child(2){
+      @include imageSet('../img/coll-2', 'png')
+    }
+
+    &:nth-child(3){
+      @include imageSet('../img/coll-3', 'png')
+    }
+
+    &:nth-child(4){
+      @include imageSet('../img/coll-4', 'png')
+    }
+  }
+
+  &__naming {
+    color: $primaryColor;
+    font-size: 53.237px;
+    font-weight: 600;
+    letter-spacing: -2.928px;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
