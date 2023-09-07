@@ -1,9 +1,12 @@
 .hero {
+  padding-bottom: 223px;
+
   &__content {
+    @include imageSet("../img/hero", "jpeg");
+
     position: relative;
     width: 100%;
     height: 742px;
-    background-image: image-set(url("../img/hero.webp") type("image/webp"), url("../img/hero.png"));
     background-repeat: no-repeat;
     background-size: cover;
   }
