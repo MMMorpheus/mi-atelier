@@ -1,0 +1,95 @@
+.services {
+  padding-top: 200px;
+
+  // &__container {
+
+  // }
+
+  // &__title {
+  //   grid-column: span 4;
+  // }
+
+  &__options {
+    display: grid;
+    padding-top: 100px;
+    gap: 50px 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+  }
+}
+
+.option {
+  @include flexHStart;
+
+  color: $primaryColor;
+
+  &:last-child {
+    grid-column-start: 4;
+  }
+
+  &__img {
+    width: 100%;
+    height: 258px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__desc {
+    padding-top: 10px;
+    font-size: 30px;
+    letter-spacing: -0.75px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    padding-top: 4px;
+    color: inherit;
+    letter-spacing: -0.4px;
+  }
+}
+
+.option__lg {
+  grid-column: span 2;
+  grid-row: span 2;
+
+  .option__img {
+    height: 522px;
+  }
+}
+
+.row {
+  grid-row-start: 3;
+}
+
+.img-1 {
+  @include imageSet("../img/services-1", "png");
+}
+
+.img-2 {
+  @include imageSet("../img/services-2", "png");
+}
+
+.img-3 {
+  @include imageSet("../img/services-3", "png");
+}
+
+.img-4 {
+  @include imageSet("../img/services-4", "png");
+}
+
+.img-5 {
+  @include imageSet("../img/services-5", "png");
+}
+
+.img-6 {
+  @include imageSet("../img/services-6", "png");
+}
+
+.img-7 {
+  @include imageSet("../img/services-7", "png");
+}
+
+.img-8 {
+  @include imageSet("../img/services-8", "png");
+}
