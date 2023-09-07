@@ -1,0 +1,53 @@
+.process {
+  background-color: white;
+  &__title {
+    padding-top: 100px;
+    border: none;
+  }
+  &__list {
+    display: grid;
+    height: 704px;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  &__item {
+    padding-top: 45px;
+    border-bottom: 1px solid $primaryColor;
+
+    &:first-child {
+      border-top: 1px solid $primaryColor;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__step {
+    color: $primaryColor;
+    font-size: 20px;
+    letter-spacing: -1.1px;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  &__term {
+    padding-left: 16px;
+    color: $primaryColor;
+    font-size: 18px;
+    letter-spacing: -0.99px;
+    line-height: normal;
+    text-transform: lowercase;
+  }
+
+  &__desc {
+    padding-left: 30px;
+    color: $primaryColor;
+    font-size: 18px;
+    grid-column: 3 / span 2;
+    letter-spacing: -0.99px;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
