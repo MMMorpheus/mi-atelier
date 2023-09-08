@@ -21,7 +21,7 @@
 
   &__desc {
     max-width: 50%;
-    color: $primaryColor;
+    color: var(--primaryColor);
     font-size: 30px;
     font-weight: 600;
     letter-spacing: -0.75px;

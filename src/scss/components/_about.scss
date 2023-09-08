@@ -15,7 +15,7 @@
 
   &__desc {
     padding: 0 20px;
-    color: $primaryColor;
+    color: var(--primaryColor);
     font-size: 25px;
     grid-column: 2 / span 2;
     letter-spacing: -0.625px;
@@ -24,7 +24,7 @@
 
   &__addDesc {
     padding: 0 35px;
-    color: $primaryColor;
+    color: var(--primaryColor);
     font-size: 20px;
     font-weight: 400;
     letter-spacing: -.5px;

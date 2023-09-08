@@ -3,12 +3,12 @@
 
   &__content {
     padding: 200px 0;
-    background-color: $primaryColor;
+    background-color: var(--thirdColor);
   }
 
   &__title {
     border: none;
-    color: white;
+    color: var(--fourthColor);
   }
 
   &__list {
@@ -18,7 +18,7 @@
   }
 
   &__item {
-    color: white;
+    color: var(--fourthColor);
     font-size: 50px;
     letter-spacing: -2.75px;
     line-height: normal;

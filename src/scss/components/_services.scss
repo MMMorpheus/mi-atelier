@@ -12,7 +12,7 @@
 .option {
   @include flexVStart;
 
-  color: $primaryColor;
+  color: var(--primaryColor);
 
   &:last-child {
     grid-column-start: 4;

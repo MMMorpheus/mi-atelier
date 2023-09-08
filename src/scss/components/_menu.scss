@@ -33,7 +33,7 @@ $linkPadding: 10px;
   &__link {
     position: relative;
     padding: 0 $linkPadding;
-    color: $primaryColor;
+    color: var(--primaryColor);
     cursor: pointer;
     font-size: 18px;
     text-decoration: none;
@@ -44,7 +44,7 @@ $linkPadding: 10px;
       left: $linkPadding;
       width: calc(100% - $linkPadding * 2);
       height: 2px;
-      background-color: $primaryColor;
+      background-color: var(--primaryColor);
       content: "";
       transform: scaleX(0);
       transform-origin: bottom right;

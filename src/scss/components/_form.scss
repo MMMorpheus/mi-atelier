@@ -1,10 +1,10 @@
 .form {
   padding-bottom: 200px;
-  
+
   &__content {
     position: relative;
     height: 760px;
-    background-color: $primaryColor;
+    background-color: var(--primaryColor);
   }
 
   &__content-container {

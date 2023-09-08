@@ -1,5 +1,19 @@
 @use 'sass:math';
 
+:root {
+  --primaryColor: #F81808;
+  --seconderyColor: #E0D9D3;
+  --thirdColor: #F81808;
+  --fourthColor: white;
+
+  @media (prefers-color-scheme: dark) {
+    --primaryColor: #F81808;
+    --seconderyColor: #1C1815;
+    --thirdColor: white;
+    --fourthColor: #F81808;
+  }
+}
+
 // Container & Breakpoints
 $containerWidth: 1320;
 $containerSafePadding: 40;
@@ -8,10 +22,6 @@ $breakpoint1450: 1449.98 + px;
 $breakpoint992: 991.98 + px;
 $breakpoint768: 767.98 + px;
 $breakpoint480: 479.98 + px;
-
-// Colors
-$primaryColor: #F81808;
-$seconderyColor: #E0D9D3;
 
 // Burger
 $burgerBreakPoint: $breakpoint992;

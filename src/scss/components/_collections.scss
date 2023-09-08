@@ -35,7 +35,7 @@
   }
 
   &__naming {
-    color: $primaryColor;
+    color: var(--primaryColor);
     font-size: 53.237px;
     font-weight: 600;
     letter-spacing: -2.928px;

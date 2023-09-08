@@ -1,6 +1,6 @@
 .owner {
   padding: 200px 0;
-  background-color: $primaryColor;
+  background-color: var(--primaryColor);
 
   &__container {
     display: flex;
@@ -37,7 +37,7 @@
     z-index: 1;
     align-self: center;
     margin-top: auto;
-    color: $primaryColor;
+    color: var(--primaryColor);
     font-size: 125px;
     letter-spacing: -7.5px;
     line-height: normal;
@@ -46,7 +46,7 @@
 
   &__desc {
     z-index: 1;
-    color: $primaryColor;
+    color: var(--primaryColor);
     font-size: 18px;
     font-weight: 400;
     letter-spacing: -0.45px;

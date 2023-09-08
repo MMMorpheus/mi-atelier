@@ -1,9 +1,12 @@
 .process {
-  background-color: white;
+  background-color: var(--fourthColor);
+
   &__title {
     padding-top: 100px;
     border: none;
+    color: var(--thirdColor);
   }
+
   &__list {
     display: grid;
     height: 704px;
@@ -12,10 +15,10 @@
 
   &__item {
     padding-top: 45px;
-    border-bottom: 1px solid $primaryColor;
+    border-bottom: 1px solid var(--thirdColor);
 
     &:first-child {
-      border-top: 1px solid $primaryColor;
+      border-top: 1px solid var(--thirdColor);
     }
   }
 
@@ -25,7 +28,7 @@
   }
 
   &__step {
-    color: $primaryColor;
+    color: var(--thirdColor);
     font-size: 20px;
     letter-spacing: -1.1px;
     line-height: normal;
@@ -34,7 +37,7 @@
 
   &__term {
     padding-left: 16px;
-    color: $primaryColor;
+    color: var(--thirdColor);
     font-size: 18px;
     letter-spacing: -0.99px;
     line-height: normal;
@@ -43,7 +46,7 @@
 
   &__desc {
     padding-left: 30px;
-    color: $primaryColor;
+    color: var(--thirdColor);
     font-size: 18px;
     grid-column: 3 / span 2;
     letter-spacing: -0.99px;

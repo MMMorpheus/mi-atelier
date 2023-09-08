@@ -4,13 +4,13 @@
   &__contacts {
     display: grid;
     padding-bottom: 100px;
-    border-bottom: 1px solid $primaryColor;
+    border-bottom: 1px solid var(--primaryColor);
     gap: 0 140px;
     grid-template-columns: repeat(4, 1fr);
   }
 
   &__item {
-    color: $primaryColor;
+    color: var(--primaryColor);
 
     h3 {
       margin-bottom: 30px;
@@ -52,7 +52,7 @@
   }
 
   &__info-item {
-    color: $primaryColor;
+    color: var(--primaryColor);
 
     p {
       margin-bottom: 40px;

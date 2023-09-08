@@ -8,7 +8,7 @@
   }
 
   &__item {
-    color: $primaryColor;
+    color: var(--primaryColor);
     font-size: 125px;
     letter-spacing: -6.875px;
     line-height: 92%; /* 115px */
