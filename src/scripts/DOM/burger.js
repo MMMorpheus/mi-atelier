@@ -1,4 +1,5 @@
 import scroll from '../utils/scroll.js';
+import navigation from '../utils/navigation.js';
 import { elements } from '../app.js';
 
 const openAriaBurger = (burgerEl) => {
@@ -27,19 +28,7 @@ export default () => {
   });
 
   menuEl.addEventListener('click', (e) => {
-    if(e.target.tagName === "A") {
-      burgerEl.classList.remove('burger-active');
-      menuEl.classList.remove('nav-active');
-      closeAriaBurger(burgerEl);
-    }
+    navigation(e)
   })
-
-  // menuItemsEl?.forEach((el) => {
-  //   el.addEventListener('click', () => {
-  //     burgerEl.classList.remove('burger-active');
-  //     menuEl.classList.remove('nav-active');
-  //     closeAriaBurger(burgerEl);
-  //   });
-  // });
 
 };

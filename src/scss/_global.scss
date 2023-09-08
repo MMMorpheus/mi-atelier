@@ -6,7 +6,7 @@ body {
 }
 
 // Container
-[class*="__container"] {
+[class*="container"] {
   width: 100%;
   max-width: ($containerWidth + $containerSafePadding) + px;
   padding: 0 $containerInlinePadding + px;
