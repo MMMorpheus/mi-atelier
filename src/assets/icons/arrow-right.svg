@@ -1,0 +1,19 @@
+<svg width="123" height="64" viewBox="0 0 123 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 70">
+<g id="LTD">
+<g id="Ellipse 4" filter="url(#filter0_b_108_261)">
+<ellipse cx="61.453" cy="31.9944" rx="61.39" ry="31.1155" fill="#D9D9D9" fill-opacity="0.2"/>
+<path d="M122.343 31.9944C122.343 40.2988 115.69 47.9478 104.636 53.5504C93.6105 59.1388 78.3436 62.6099 61.453 62.6099C44.5624 62.6099 29.2955 59.1388 18.2698 53.5504C7.21599 47.9478 0.562988 40.2988 0.562988 31.9944C0.562988 23.6899 7.21599 16.041 18.2698 10.4384C29.2955 4.85001 44.5624 1.37891 61.453 1.37891C78.3436 1.37891 93.6105 4.85001 104.636 10.4384C115.69 16.041 122.343 23.6899 122.343 31.9944Z" stroke="#F8F8F8"/>
+</g>
+</g>
+<path id="Vector 24" d="M89.2394 32.3502C89.4361 32.1564 89.4384 31.8398 89.2445 31.6431L86.0855 28.4383C85.8917 28.2417 85.5751 28.2394 85.3784 28.4332C85.1818 28.6271 85.1795 28.9437 85.3734 29.1403L88.1813 31.989L85.3326 34.797C85.136 34.9909 85.1337 35.3075 85.3275 35.5041C85.5214 35.7008 85.8379 35.7031 86.0346 35.5092L89.2394 32.3502ZM40.2105 32.1435L88.8848 32.4941L88.892 31.4942L40.2177 31.1436L40.2105 32.1435Z" fill="#F8F8F8"/>
+</g>
+<defs>
+<filter id="filter0_b_108_261" x="-29.937" y="-29.1211" width="182.78" height="122.231" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="15"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_108_261"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_108_261" result="shape"/>
+</filter>
+</defs>
+</svg>
