@@ -1,34 +1,50 @@
 import scroll from '../utils/scroll.js';
+import aria from '../utils/aria.js';
 import navigation from '../utils/navigation.js';
 import { elements } from '../app.js';
 
-const openAriaBurger = (burgerEl) => {
-  burgerEl?.setAttribute('aria-expanded', 'true');
-  burgerEl?.setAttribute('aria-label', 'Закрыть меню');
-  scroll.disable();
-};
-
-const closeAriaBurger = (burgerEl) => {
-  burgerEl?.setAttribute('aria-expanded', 'false');
-  burgerEl?.setAttribute('aria-label', 'Открыть меню');
-  scroll.enable();
-};
-
 export default () => {
-  const { burgerEl, menuEl} = elements;
+  const { burgerEl, menuEl } = elements;
 
+  const isMobile = window.matchMedia('(max-width: 991.98px)');
+  // const headerOffset = document.querySelector('.header').getBoundingClientRect().bottom
+  let isMenuOpened = false;
+
+  // Handling menu's state by changing classNames
   burgerEl?.addEventListener('click', () => {
-    burgerEl.classList.toggle('burger-active');
-    menuEl.classList.toggle('nav-active');
+    if (isMobile.matches) {
+      isMenuOpened ? (isMenuOpened = false) : (isMenuOpened = true);
 
-    if (menuEl?.classList.contains('nav-active')) {
-      openAriaBurger(burgerEl);
+      burgerEl.classList.toggle('burger-active');
+      // menuEl.style.top = `${headerOffset}px`;
+      // menuEl.style.height = `calc(100% -${headerOffset}px)`;
+      menuEl.classList.toggle('nav-active');
+
+      // If is opened, handling scroll and aria attr's
+      if (isMenuOpened) {
+        aria.open(burgerEl, 'menu');
+        scroll.disable();
+      } else {
+        aria.close(burgerEl, 'menu');
+        scroll.enableWithOffset();
+      }
     }
-    closeAriaBurger(burgerEl);
   });
 
+  // Handling scroll behaviour and aria attr's by click on menu elements
   menuEl.addEventListener('click', (e) => {
-    navigation(e)
-  })
-
+    if (isMobile.matches) {
+      burgerEl.classList.toggle('burger-active');
+      menuEl.classList.toggle('menu-active');
+    }
+    if (isMenuOpened) {
+      aria.close(burgerEl, 'menu');
+      scroll.enableWithOffset();
+      isMenuOpened = false;
+    }
+    if (e.target.tagName === 'A') {
+      navigation(e);
+    }
+  });
 };
+

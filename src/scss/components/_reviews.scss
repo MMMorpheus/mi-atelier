@@ -1,14 +1,25 @@
 .reviews {
-  padding: 200px 0;
+  padding: between(100px, 200px) 0;
 
   &__content {
     @include imageSet("../img/reviews", "png");
 
     display: flex;
     width: 100%;
-    height: 1260px;
+    height: between(693px, 1260px);
     padding-bottom: 75px;
     background-repeat: no-repeat;
+    background-size: 75%;
+
+    @media screen and (max-width: $breakpoint992) {
+      flex-direction: column-reverse;
+      align-items: center;
+      background-size: cover;
+    };
+
+    @media screen and (max-width: $breakpoint768 ) {
+      height: auto;
+    };
   }
 
   &__controls {
@@ -17,6 +28,10 @@
     align-items: flex-end;
     justify-content: center;
     gap: 0 15px;
+
+    @media screen and (max-width: $breakpoint992) {
+      flex-basis: auto;
+    };
 
     button {
       @include resetBtn;
@@ -31,6 +46,10 @@
     overflow: hidden;
     width: 700px;
     height: 100%;
+
+    @media screen and (max-width: $breakpoint768) {
+      width: 90%;
+    };
   }
 
   &__list {
@@ -59,14 +78,26 @@
       letter-spacing: -0.5px;
       line-height: 103.523%; /* 20.705px */
       text-transform: lowercase;
+
+      @media screen and (max-width: $breakpoint992) {
+        margin-left: auto;
+      };
+
+      @media screen and (max-width: $breakpoint480) {
+        margin-left: 58%;
+      };
     }
 
     p {
       margin-top: auto;
-      font-size: 45px;
+      font-size: between(23px, 45px);
       letter-spacing: -1.25px;
       line-height: normal;
       text-transform: uppercase;
+
+      @media screen and (max-width: $breakpoint992) {
+        margin-top: 30%;
+      };
     }
   }
 }

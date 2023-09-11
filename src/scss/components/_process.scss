@@ -2,7 +2,7 @@
   background-color: var(--fourthColor);
 
   &__title {
-    padding-top: 100px;
+    padding-top: between(50px, 100px);
     border: none;
     color: var(--thirdColor);
   }
@@ -11,11 +11,15 @@
     display: grid;
     height: 704px;
     grid-template-rows: repeat(4, 1fr);
+
+    @media screen and (max-width: $breakpoint768) {
+      height: auto;
+    };
   }
 
   &__item {
-    padding-top: 45px;
     border-bottom: 1px solid var(--thirdColor);
+    padding-block: between(22.5px, 45px);
 
     &:first-child {
       border-top: 1px solid var(--thirdColor);
@@ -25,11 +29,18 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: $breakpoint480) {
+      gap: 10px 0;
+      grid-template-columns: unset;
+      grid-template-rows: repeat(3, auto);
+      place-items: center;
+    }
   }
 
   &__step {
     color: var(--thirdColor);
-    font-size: 20px;
+    font-size: between(16px, 20px);
     letter-spacing: -1.1px;
     line-height: normal;
     text-transform: uppercase;
@@ -38,19 +49,29 @@
   &__term {
     padding-left: 16px;
     color: var(--thirdColor);
-    font-size: 18px;
+    font-size: between(14px, 18px);
     letter-spacing: -0.99px;
     line-height: normal;
     text-transform: lowercase;
+
+    @media screen and (max-width: $breakpoint480) {
+      padding-left: 0;
+    }
   }
 
   &__desc {
     padding-left: 30px;
     color: var(--thirdColor);
-    font-size: 18px;
+    font-size: between(14px, 18px);
     grid-column: 3 / span 2;
     letter-spacing: -0.99px;
     line-height: normal;
     text-transform: uppercase;
+
+    @media screen and (max-width: $breakpoint480) {
+      padding-left: 0;
+      grid-column: unset;
+      text-align: center;
+    }
   }
 }

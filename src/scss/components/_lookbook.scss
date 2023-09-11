@@ -10,13 +10,32 @@
     top: 10%;
     left: 50%;
     border: none;
-    transform: translateX(-50%);
+    margin-bottom: 0;
+    translate: -50% 0;
+
+    @media screen and (max-width: $breakpoint768) {
+      top: 50%;
+      right: 10%;
+      left: auto;
+      rotate: 90deg;
+      translate: 0 -50%;
+    }
+
+    @media screen and (max-width: $breakpoint480) {
+      opacity: 0.5;
+    };
   }
 
   &__list {
     display: grid;
-    height: 1500px;
+    height: between(900px, 1500px, $breakpoint768);
     grid-template-columns: repeat(7, 1fr);
+
+    @media screen and (max-width: $breakpoint768) {
+      height: auto;
+      grid-template-columns: unset;
+      grid-template-rows: repeat(7, 1fr);
+    }
   }
 
   &__item {
@@ -25,25 +44,48 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 80px;
+    padding-bottom: between(40px, 80px, $breakpoint768);
     border-right: 1px solid var(--primaryColor);
     cursor: pointer;
-    gap: 50px 0;
+    gap: between(25px, 50px) 0;
+
+    @media screen and (max-width: $breakpoint768) {
+      width: 100%;
+      flex-direction: row-reverse;
+      padding: 20px 0;
+      border-right: 0;
+      border-bottom: 1px solid var(--primaryColor);
+      gap: 0 10px;
+    }
 
     &:first-child {
       border-left: 1px solid var(--primaryColor);
+
+      @media screen and (max-width: $breakpoint768) {
+        border-top: 1px solid var(--primaryColor);
+        border-left: 0;
+      }
     }
   }
 
   &__thumb {
     position: absolute;
     top: 25%;
-    left: -30px;
-    width: 250px;
-    height: 340px;
+    left: -12.5%;
+    width: between(125px, 250px, $breakpoint768);
+    height: between(170px, 340px, $breakpoint768);
     opacity: 0;
     transition-duration: 0.3s;
     visibility: hidden;
+
+    @media screen and (max-width: $breakpoint768) {
+      position: static;
+      width: 100px;
+      height: 100px;
+      margin-left: auto;
+      opacity: 1;
+      visibility: visible;
+    }
 
     img {
       width: 100%;
@@ -62,24 +104,36 @@
   &__name {
     width: 95px;
     color: var(--primaryColor);
-    font-size: 80px;
+    font-size: between(20px, 80px);
     letter-spacing: -4.4px;
     line-height: normal;
+    rotate: -90deg;
     text-transform: uppercase;
-    transform: rotate(-90deg);
     transform-origin: center;
     white-space: nowrap;
+
+    @media screen and (max-width: $breakpoint768) {
+      width: auto;
+      letter-spacing: -1px;
+      rotate: 0deg;
+      white-space: normal;
+    }
+
+    @media screen and (max-width: $breakpoint480) {
+      text-align: center;
+    };
+
   }
 
   &__year {
     @include flexAllCenter;
 
     display: inline-flex;
-    padding: 11px 32px;
+    padding: between(5.5px, 11px) between(16px, 32px);
     border: 1px solid var(--primaryColor);
     border-radius: 50%;
     color: var(--primaryColor);
-    font-size: 32.623px;
+    font-size: between(16px, 32.623px);
     font-weight: 500;
     letter-spacing: -1.957px;
     line-height: normal;

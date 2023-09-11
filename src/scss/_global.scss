@@ -13,7 +13,7 @@ body {
   margin: 0 auto;
 
   @media (max-width: $breakpoint1450) {
-    max-width: 1320px;
+    max-width: 1360px;
   }
 
   @media (max-width: $breakpoint992) {
@@ -52,23 +52,39 @@ body {
 
 h1 {
   color: var(--primaryColor);
-  font-size: 160px;
+  font-size: between(60px, 160px, $breakpoint480, $breakpoint992);
   letter-spacing: -15.2px;
   line-height: normal;
   text-align: center;
   text-transform: uppercase;
+
+  @media screen and (max-width: $breakpoint992)  {
+    letter-spacing: -10.2px;
+  };
+
+  @media screen and (max-width: $breakpoint768)  {
+    letter-spacing: -5.2px;
+  };
 }
 
 .section-heading {
   border-top: 1px solid var(--primaryColor);
   border-bottom: 1px solid var(--primaryColor);
-  margin-bottom: 100px;
+  margin-bottom: between(50px, 100px);
   color: var(--primaryColor);
-  font-size: 125px;
+  font-size: between(37.5px, 125px);
   letter-spacing: -7.5px;
   line-height: normal;
   text-align: center;
   text-transform: uppercase;
+
+  @media screen and (max-width: $breakpoint768) {
+    letter-spacing: -3.5px;
+  };
+
+  @media screen and (max-width: $breakpoint480) {
+    letter-spacing: -1.5px;
+  };
 }
 
 .desc {
@@ -88,7 +104,7 @@ h1 {
   backdrop-filter: blur(15px);
   background: rgb(227 227 227 / 20%);
   color: white;
-  font-size: 20px;
+  font-size: between(14px, 20px);
   text-transform: uppercase;
   transition: scale .3s ease, box-shadow .3s ease;
 
@@ -99,9 +115,9 @@ h1 {
 }
 
 .btn-md {
-  padding: 27px 192px;
+  padding: between(8.1px, 27px) between(57.6px, 192px);
 }
 
 .btn-lg {
-  padding: 31px 260px;
+  padding: between(9.3px, 31px) between(78px, 260px);
 }

@@ -16,3 +16,9 @@
     }
   }
 }
+
+a[data-contact] {
+  @media screen and (max-width: $burgerBreakPoint) {
+    display: none;
+  };
+}

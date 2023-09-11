@@ -1,8 +1,8 @@
 .clients {
-  padding-top: 200px;
+  padding-top: between(100px, 200px);
 
   &__content {
-    padding: 200px 0;
+    padding: between(100px, 200px) 0;
     background-color: var(--thirdColor);
   }
 
@@ -14,18 +14,26 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px 200px;
+    gap: 30px between(30px, 200px);
+
+    @media screen and (max-width: $breakpoint480) {
+      justify-content: space-evenly;
+    };
   }
 
   &__item {
     color: var(--fourthColor);
-    font-size: 50px;
+    font-size: between(25px, 50px);
     letter-spacing: -2.75px;
     line-height: normal;
     text-transform: uppercase;
 
     &:nth-child(3n-1) {
       margin: 0 auto;
+
+      @media screen and (max-width: $breakpoint480) {
+        margin: unset;
+      };
     }
   }
 }

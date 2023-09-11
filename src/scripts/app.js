@@ -5,6 +5,7 @@ import navigation from './utils/navigation.js';
 // DOM manipulation
 import burger from './DOM/burger.js';
 import reviewsSlider from './DOM/reviewsSlider.js';
+import spoiler from './DOM/spoiler.js';
 
 // DOM elements
 const burgerEl = document.querySelector('[data-burger]');
@@ -14,6 +15,7 @@ const contactLinkEl = document.querySelector('[data-contact]');
 const slider = document.querySelector('[data-slider]');
 const prev = document.querySelector('[data-prev]');
 const next = document.querySelector('[data-next]');
+const spoilerEl = document.querySelectorAll('[data-spoiler]')
 
 export const elements = {
   burgerEl,
@@ -21,11 +23,13 @@ export const elements = {
   slider,
   prev,
   next,
+  spoilerEl
 };
 
 documentReady(() => {
   burger();
   reviewsSlider();
+  spoiler();
 
   footerMenuEl.addEventListener('click', (e) => navigation(e));
   contactLinkEl.addEventListener('click', (e) => navigation(e));

@@ -1,22 +1,30 @@
 .achievements {
-  padding: 200px 0 220px;
+  padding: between(100px, 200px) 0 between(110px, 220px);
 
   &__list {
     @include flexVStart;
 
-    gap: 100px 0;
+    gap: between(25px, 100px) 0;
   }
 
   &__item {
     color: var(--primaryColor);
-    font-size: 125px;
+    font-size: between(37.5px, 125px);
     letter-spacing: -6.875px;
     line-height: 92%; /* 115px */
     text-transform: uppercase;
 
+    @media screen and (max-width: $breakpoint768) {
+      letter-spacing: -3.5px;
+    };
+
+    @media screen and (max-width: $breakpoint480) {
+      letter-spacing: -1.5px;
+    };
+
     span {
       display: inline-block;
-      width: 300px;
+      width: between(90px, 300px);
       font-style: italic;
       font-weight: 200;
     }

@@ -5,9 +5,13 @@ $linkPadding: 10px;
 
   @media screen and (max-width: $burgerBreakPoint) {
     position: fixed;
+    z-index: 2;
+    top: 80px;
     left: 0;
     width: 100%;
-    transform: translateX(0);
+    height: calc(100% - 80px);
+    background-color: var(--seconderyColor);
+    transform: translateX(100%);
     transition: transform 0.6s ease-in-out;
   }
 
@@ -20,6 +24,7 @@ $linkPadding: 10px;
       height: 100%;
       flex-direction: column;
       align-items: center;
+      justify-content: space-evenly;
       overflow-y: auto;
     }
   }
@@ -37,6 +42,11 @@ $linkPadding: 10px;
     cursor: pointer;
     font-size: 18px;
     text-decoration: none;
+
+    @media screen and (max-width: $burgerBreakPoint) {
+      padding: $linkPadding;
+      font-size: 30px;
+    }
 
     &::after {
       position: absolute;
@@ -56,10 +66,10 @@ $linkPadding: 10px;
         transform: scaleX(1);
         transform-origin: bottom left;
       }
-    }
+    };
   }
 
   &-active {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
 }

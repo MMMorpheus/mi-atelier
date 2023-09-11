@@ -1,5 +1,5 @@
 .collections {
-  padding: 200px 0;
+  padding: between(100px, 200px) 0;
 
   &__content {
     display: flex;
@@ -10,12 +10,17 @@
   &__item {
     display: flex;
     width: calc(50% - 10px);
-    height: 560px;
+    height: between(336px, 560px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-position: center;
     background-size: cover;
+
+    @media screen and (max-width: $breakpoint768) {
+      width: 100%;
+
+    };
 
     &:nth-child(1){
       @include imageSet('../img/coll-1', 'png')
@@ -36,7 +41,7 @@
 
   &__naming {
     color: var(--primaryColor);
-    font-size: 53.237px;
+    font-size: between(40px, 53.237px);
     font-weight: 600;
     letter-spacing: -2.928px;
     line-height: normal;

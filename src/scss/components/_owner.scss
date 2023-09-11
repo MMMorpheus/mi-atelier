@@ -1,5 +1,5 @@
 .owner {
-  padding: 200px 0;
+  padding: between(100px, 200px) 0;
   background-color: var(--primaryColor);
 
   &__container {
@@ -7,6 +7,11 @@
     padding: 20px 21px 23px;
     background-color: white;
     gap: 0 20px;
+
+    @media screen and (max-width: $breakpoint768) {
+      flex-direction: column;
+      gap: 20px 0;
+    };
   }
 
   &__card {
@@ -14,23 +19,33 @@
 
     position: relative;
     width: 50%;
-    height: 897px;
+    height: between(448.5px, 897px);
     padding: 20px 28px 0;
     gap: 20px 0;
+
+    @media screen and (max-width: $breakpoint768) {
+      width: 100%;
+    };
   }
 
   &__img {
     position: absolute;
     z-index: 0;
+    background-position: center;
+    background-size: cover;
     filter: grayscale(1);
     inset: 0;
     transition-duration: 0.5s;
+
+    @media screen and (max-width: $breakpoint768) {
+      background-position: top;
+    }
 
     &:hover {
       @media (hover: hover) {
         filter: grayscale(0);
       }
-    }
+    };
   }
 
   &__name {
@@ -38,16 +53,25 @@
     align-self: center;
     margin-top: auto;
     color: var(--primaryColor);
-    font-size: 125px;
+    font-size: between(50.5px, 125px, $breakpoint768);
     letter-spacing: -7.5px;
     line-height: normal;
     text-transform: uppercase;
+
+    @media screen and (max-width: $breakpoint768) {
+      font-size: between(50.5px, 125px, $breakpoint480, $breakpoint768);
+      letter-spacing: -3.5px;
+    };
+
+    @media screen and (max-width: $breakpoint480) {
+      letter-spacing: -1.5px;
+    };
   }
 
   &__desc {
     z-index: 1;
     color: var(--primaryColor);
-    font-size: 18px;
+    font-size: between(13px, 18px);
     font-weight: 400;
     letter-spacing: -0.45px;
     line-height: 116.023%; /* 20.884px */

@@ -1,3 +1,5 @@
+import throttle from '../utils/throttle.js';
+
 import { elements } from '../app.js';
 
 export default () => {
@@ -7,9 +9,15 @@ export default () => {
   // Counting slides lenght
   const slidesCount = sliderTrack.children.length;
   // Counting offset value
-  const offset = slider.offsetWidth;
+  let offset = slider.offsetWidth;
   // Counting maximal offset value
-  const maxOffsetValue = (slidesCount - 1) * offset;
+  let maxOffsetValue = (slidesCount - 1) * offset;
+  // Adaptive
+  window.addEventListener('resize', () => {
+    offset = slider.offsetWidth;
+    maxOffsetValue = (slidesCount - 1) * offset;
+    sliderTrack.style.left = 0;
+  });
 
   let offsetValue = 0;
 
@@ -24,7 +32,7 @@ export default () => {
 
   function stepForward() {
     offsetValue += offset;
-    if ((offsetValue > maxOffsetValue)) {
+    if (offsetValue > maxOffsetValue) {
       offsetValue = 0;
     }
     sliderTrack.style.left = `-${offsetValue}px`;

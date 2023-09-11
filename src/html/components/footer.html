@@ -40,9 +40,16 @@
         <li class="footer__info-item">
           <p>mi atelier 2012 ©</p>
         </li>
-        <li class="footer__info-item">
-          <p>menu</p>
-          <ul data-footerMenu>
+        <li
+          class="footer__info-item"
+          data-spoiler>
+          <button aria-expanded="false">
+            <span class="spoiler__title">menu</span>
+            <span class="spoiler__btn"></span>
+          </button>
+          <ul
+            data-footer-menu
+            class="spoiler__content" aria-hidden="true">
             <li>
               <a
                 href="#"
@@ -80,9 +87,14 @@
             </li>
           </ul>
         </li>
-        <li class="footer__info-item">
-          <p>partnership</p>
-          <ul>
+        <li
+          class="footer__info-item"
+          data-spoiler>
+          <button aria-expanded="false">
+            <span class="spoiler__title">partnership</span>
+            <span class="spoiler__btn"></span>
+          </button>
+          <ul class="spoiler__content" aria-hidden="true">
             <a href="#">
               <li>franchise</li>
             </a>
@@ -97,11 +109,18 @@
             </a>
           </ul>
         </li>
-        <li class="footer__info-item">
-          <p>contact</p>
-          <a href="#">32 HOMESTEAD AVE MIDDLETOWN NY 10941-1012, USA</a>
-          <a href="#">+1 (999) 999-9999</a>
-          <a href="#">+1 (999) 499-9496</a>
+        <li
+          class="footer__info-item"
+          data-spoiler>
+          <button aria-expanded="false">
+            <span class="spoiler__title">contanct</span>
+            <span class="spoiler__btn"></span>
+          </button>
+          <div class="spoiler__content" aria-hidden="true">
+            <a href="#">32 HOMESTEAD AVE MIDDLETOWN NY 10941-1012, USA</a>
+            <a href="#">+1 (999) 999-9999</a>
+            <a href="#">+1 (999) 499-9496</a>
+          </div>
         </li>
       </ul>
     </div>
